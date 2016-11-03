@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : replace.c of Steg
- Created on  : 2 Ιουλ 2014
+ Created on  : 2 Γ‰Γ―ΓµΓ« 2014
  Author      : Panagiotis Michalopoulos
  Version     : 0.9
  Copyright   : Copyright(C) Panagiotis Michalopoulos
@@ -75,7 +75,7 @@ void writeBack(unsigned char *table, char f_input[PATH_MAX], char f_output[PATH_
 {
 	FILE *dest;
 	int i,counter=0;
-	char command[] = "copy /b ";
+	char command[] = "copy /b ";  //Windows dependent
 
 	strncat(command,f_input,PATH_MAX);
 	strcat(command," ");
@@ -95,5 +95,3 @@ void writeBack(unsigned char *table, char f_input[PATH_MAX], char f_output[PATH_
 	}
 	fclose(dest);
 }
-
-
